@@ -1,3 +1,4 @@
+
 <emoji-mart
   [hidden]="!this.showEmojiPicker"
   class="emoji-picker"
@@ -15,7 +16,7 @@
         <mat-icon inline="true" aria-label="Quit cross icon">close</mat-icon>
       </button>
     </div>
-    <p>{{ originalComment != null ? originalComment.comment : '' }}</p>
+    <p>{{ originalComment != null ? originalComment.text : '' }}</p>
   </div>
 </div>
 
@@ -59,6 +60,14 @@
         aria-label="Emoji picker button"
         >emoji_emotions</mat-icon
       >
+    </div>
+    <div id="innerButtons" style="margin-left: 10px;margin-right: 5px;">
+      <mat-icon 
+       type="button" 
+       (click)="sendEmail()">email
+       aria-hidden="false"
+        aria-label="Emoji picker button"
+      </mat-icon>
     </div>
   </div>
 </form>
